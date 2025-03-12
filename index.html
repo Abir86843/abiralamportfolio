@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abir Alam Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Playfair+Display" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Roboto', sans-serif; background-color: #f0f0f0; color: #333; }
+    header { background-color: #fff; padding: 20px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    header h1 { font-family: 'Playfair Display', serif; font-size: 2.5em; margin: 0; font-weight: bold; }
+    .categories { display: flex; flex-wrap: wrap; justify-content: center; padding: 40px 20px; }
+    .category {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin: 15px;
+      padding: 20px;
+      flex: 1 0 200px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .category a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: inherit;
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+    footer { position: fixed; bottom: 0; left: 0; right: 0; padding: 10px 20px; background-color: #fff; box-shadow: 0 -2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; }
+    .contact, .address { font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Abir Alam Portfolio</h1>
+  </header>
+  <section class="categories">
+    <div class="category">
+      <a href="flyer.html">Flyer Design</a>
+    </div>
+    <div class="category">
+      <a href="business-card.html">Business Card Design</a>
+    </div>
+    <div class="category">
+      <a href="letterhead.html">Letterhead Design</a>
+    </div>
+    <div class="category">
+      <a href="banner.html">Banner Design</a>
+    </div>
+    <div class="category">
+      <a href="tshirt.html">T-Shirt Design</a>
+    </div>
+    <div class="category">
+      <a href="logo.html">Logo Design</a>
+    </div>
+    <div class="category">
+      <a href="calendar.html">Calendar Design</a>
+    </div>
+  </section>
+  <footer>
+    <div class="contact">+880 1736457957</div>
+    <div class="address">Shimultali, Joydebpur, Gazipur, Dhaka, Bangladesh</div>
+  </footer>
+  <!-- Appended JavaScript to make entire category box clickable -->
+  <script>
+    document.querySelectorAll('.category').forEach(function(box) {
+      box.addEventListener('click', function() {
+        var link = box.querySelector('a');
+        if (link && link.getAttribute('href')) {
+          window.location.href = link.getAttribute('href');
+        }
+      });
+    });
+  </script>
+</body>
+</html> 
